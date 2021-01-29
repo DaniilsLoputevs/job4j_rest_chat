@@ -1,0 +1,58 @@
+## create person
+POST http://localhost:8083/api/person/
+Content-Type: application/json
+
+{
+  "name": "Kayto"
+}
+
+###
+
+## create room
+POST http://localhost:8083/api/room/
+Content-Type: application/json
+
+{
+  "name": "public room(3)"
+}
+
+###
+
+## add person to room
+POST http://localhost:8083/api/room/person/?roomID=1&personID=1
+
+###
+
+## add msg to room
+POST http://localhost:8083/api/room/msg/?roomID=1
+Content-Type: application/json
+
+{
+  "creator": {
+    "id": 1,
+    "name": "Kirin"
+  },
+  "content": "Second msg from Kirin"
+}
+
+###
+
+
+
+
+
+
+
+
+## test
+
+## get room by id
+GET http://localhost:8083/api/room/1
+
+
+###
+## del room by id
+DELETE http://localhost:8083/api/room/2
+
+
+###
