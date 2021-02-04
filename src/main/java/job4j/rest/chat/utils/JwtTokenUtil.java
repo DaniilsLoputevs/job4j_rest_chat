@@ -1,4 +1,4 @@
-package job4j.rest.chat.a_example_jwt;
+package job4j.rest.chat.utils;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -71,4 +71,5 @@ public class JwtTokenUtil implements Serializable {
         final String username = getUsernameFromToken(token);
         return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
     }
+    
 }

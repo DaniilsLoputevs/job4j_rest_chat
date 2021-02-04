@@ -1,10 +1,9 @@
-package job4j.rest.chat.a_example_jwt.controllers;
+package job4j.rest.chat.controllers;
 
-
-import job4j.rest.chat.a_example_jwt.JwtTokenUtil;
-import job4j.rest.chat.a_example_jwt.JwtUserDetailsService;
-import job4j.rest.chat.a_example_jwt.models.JwtRequest;
-import job4j.rest.chat.a_example_jwt.models.JwtResponse;
+import job4j.rest.chat.models.jwt.JwtRequest;
+import job4j.rest.chat.models.jwt.JwtResponse;
+import job4j.rest.chat.services.JwtUserDetailsService;
+import job4j.rest.chat.utils.JwtTokenUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -30,8 +29,11 @@ public class JwtAuthenticationController {
     @Autowired
     private JwtUserDetailsService userDetailsService;
     
+    /**
+     * Request for get JWT.
+     */
     @PostMapping(value = "/authenticate")
-    public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtRequest authenticationRequest)
+    public ResponseEntity<JwtResponse> createAuthenticationToken(@RequestBody JwtRequest authenticationRequest)
             throws Exception {
         
         authenticate(authenticationRequest.getUsername(), authenticationRequest.getPassword());
@@ -53,4 +55,5 @@ public class JwtAuthenticationController {
             throw new Exception("INVALID_CREDENTIALS", e);
         }
     }
+    
 }

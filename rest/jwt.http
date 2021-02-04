@@ -2,19 +2,14 @@ POST http://localhost:8083/authenticate
 Content-Type: application/json
 
 {
-  "username": "javainuse",
+  "username": "Kirin",
   "password": "password"
 }
 
 ###
 
-GET http://localhost:8083/hello
+GET http://localhost:8083/api/person/
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqYXZhaW51c2UiLCJleHAiOjE2MTI0MTQzMDQsImlhdCI6MTYxMjM5NjMwNH0.Eqj846tfpJoeWcJ1hCrCpJTsn1GCVPmqV5HeM-9ZerETjj7zoxVQAvcMCdrJfSTDpkpO_psfNFhoVsIbv-RMWQ
-
-{
-  "username": "javainsue",
-  "password": "password"
-}
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJLaXJpbiIsImV4cCI6MTYxMjQ3NzM4MiwiaWF0IjoxNjEyNDU5MzgyfQ.G5QmoNUqTE_KQW8IBXdy7S7HfaeREoYzaxwf58a8PfNquNMuz-ZPdlXypjvNN7WscNpg_7wikfPiRG8PW1UHow
 
 ###

@@ -1,8 +1,8 @@
-package job4j.rest.chat.a_example_jwt.filters;
+package job4j.rest.chat.filters;
 
 import io.jsonwebtoken.ExpiredJwtException;
-import job4j.rest.chat.a_example_jwt.JwtTokenUtil;
-import job4j.rest.chat.a_example_jwt.JwtUserDetailsService;
+import job4j.rest.chat.services.JwtUserDetailsService;
+import job4j.rest.chat.utils.JwtTokenUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -17,6 +17,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * This type of filter work for all request anyway, it doesn't depend on any Web/Security configuration.
+ */
 @Component
 public class JwtRequestFilter extends OncePerRequestFilter {
     

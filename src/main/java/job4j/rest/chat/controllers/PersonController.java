@@ -22,6 +22,7 @@ import java.util.stream.StreamSupport;
  */
 @RestController
 @RequestMapping("api/person")
+@CrossOrigin(value = {"*"})
 public class PersonController {
     @Autowired
     RoomService roomService;

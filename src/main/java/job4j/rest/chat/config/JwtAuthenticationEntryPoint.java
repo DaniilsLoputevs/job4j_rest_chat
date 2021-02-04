@@ -1,4 +1,4 @@
-package job4j.rest.chat.a_example_jwt;
+package job4j.rest.chat.config;
 
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;

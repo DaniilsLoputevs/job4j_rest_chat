@@ -20,7 +20,6 @@ import java.text.SimpleDateFormat;
 public class Message {
     private int id;
     @ManyToOne
-//    @Column(name = "creator")
     private Person creator;
     private String content;
     private Timestamp timestamp = new Timestamp(System.currentTimeMillis());
@@ -29,12 +28,7 @@ public class Message {
     
     
     public String prettyFormat() {
-        ter("asasd", "asdasd", "asdasdsd");
         return sdf.format(timestamp) + "   " + creator.getName() + ": " + content;
-    }
-    
-    public void ter(String... args) {
-    
     }
     
 }
