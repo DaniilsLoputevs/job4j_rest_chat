@@ -1,0 +1,20 @@
+POST http://localhost:8083/authenticate
+Content-Type: application/json
+
+{
+  "username": "javainuse",
+  "password": "password"
+}
+
+###
+
+GET http://localhost:8083/hello
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqYXZhaW51c2UiLCJleHAiOjE2MTI0MTQzMDQsImlhdCI6MTYxMjM5NjMwNH0.Eqj846tfpJoeWcJ1hCrCpJTsn1GCVPmqV5HeM-9ZerETjj7zoxVQAvcMCdrJfSTDpkpO_psfNFhoVsIbv-RMWQ
+
+{
+  "username": "javainsue",
+  "password": "password"
+}
+
+###

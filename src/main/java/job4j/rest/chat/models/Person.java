@@ -15,10 +15,21 @@ import javax.persistence.*;
 /* Spring JPA */
 @Entity
 @Table(name = "persons")
-public class Person {
+public class Person implements Cloneable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
+    private String password;
     
+    // maybe need: userName & password
+    
+    
+    /**
+     * @implSpec Deep cloning.
+     */
+    @Override
+    public Person clone() {
+        return new Person(this.id, this.name, this.password);
+    }
 }
